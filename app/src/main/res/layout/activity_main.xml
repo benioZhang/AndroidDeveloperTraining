@@ -11,4 +11,21 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.benio.training.MainActivity">
 
+    <Button
+        android:id="@+id/btn_class1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Class1"/>
+
+    <Button
+        android:id="@+id/btn_class2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Class2"/>
+
+    <Button
+        android:id="@+id/btn_class3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Class3"/>
 </LinearLayout>

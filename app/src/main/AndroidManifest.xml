@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.benio.training"
-          xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.benio.training">
 
     <application
         android:allowBackup="true"
@@ -14,6 +14,20 @@
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".class1.MyActivity"
+            android:label="@string/title_activity_my"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".class1.DisplayMessageActivity"
+            android:label="@string/title_activity_display_message"
+            android:parentActivityName=".class1.MyActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.benio.training.class1.MyActivity"/>
         </activity>
     </application>
 
