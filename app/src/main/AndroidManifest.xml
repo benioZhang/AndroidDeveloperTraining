@@ -8,7 +8,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -16,18 +18,33 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".class1.MyActivity"
+            android:name=".class1.Class1Activity"
             android:label="@string/title_activity_my"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
             android:name=".class1.DisplayMessageActivity"
             android:label="@string/title_activity_display_message"
-            android:parentActivityName=".class1.MyActivity"
+            android:parentActivityName=".class1.Class1Activity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.benio.training.class1.MyActivity"/>
+                android:value=".class1.Class1Activity"/>
+        </activity>
+        <activity
+            android:name=".class2.Class2Activity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".class1.Class1Activity"/>
+        </activity>
+        <activity android:name=".class4.Class4Activity">
+        </activity>
+        <activity android:name=".class3.Class3Activity">
+        </activity>
+        <activity
+            android:name=".class3.DialogActivity"
+            android:theme="@android:style/Theme.Dialog">
         </activity>
     </application>
 

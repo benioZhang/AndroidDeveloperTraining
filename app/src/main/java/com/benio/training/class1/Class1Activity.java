@@ -11,13 +11,13 @@ import android.widget.EditText;
 
 import com.benio.training.R;
 
-public class MyActivity extends AppCompatActivity {
+public class Class1Activity extends AppCompatActivity {
     public final static String EXTRA_MESSAGE = "com.mycompany.myfirstapp.MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my);
+        setContentView(R.layout.activity_class1);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -30,8 +30,6 @@ public class MyActivity extends AppCompatActivity {
             }
         });
     }
-
-    private static final String TAG = "MyActivity";
 
     /**
      * Called when the user clicks the Send button
