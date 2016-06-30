@@ -39,5 +39,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Class4"/>
+
+        <Button
+            android:id="@+id/btn_class5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Class5"/>
+
     </LinearLayout>
 </ScrollView>

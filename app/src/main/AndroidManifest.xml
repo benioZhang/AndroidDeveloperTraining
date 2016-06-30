@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.benio.training">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -45,6 +47,8 @@
         <activity
             android:name=".class3.DialogActivity"
             android:theme="@android:style/Theme.Dialog">
+        </activity>
+        <activity android:name=".class5.Class5Activity">
         </activity>
     </application>
 
