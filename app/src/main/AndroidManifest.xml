@@ -50,6 +50,8 @@
         </activity>
         <activity android:name=".class5.Class5Activity">
         </activity>
+        <activity android:name=".class6.Class6Activity">
+        </activity>
     </application>
 
 </manifest>
