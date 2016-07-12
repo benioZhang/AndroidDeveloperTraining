@@ -3,6 +3,7 @@
           package="com.benio.training">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
 
     <application
         android:allowBackup="true"
@@ -51,6 +52,8 @@
         <activity android:name=".class5.Class5Activity">
         </activity>
         <activity android:name=".class6.Class6Activity">
+        </activity>
+        <activity android:name=".class7.Class7Activity">
         </activity>
     </application>
 
