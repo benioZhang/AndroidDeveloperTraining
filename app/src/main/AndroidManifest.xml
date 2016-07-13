@@ -55,6 +55,8 @@
         </activity>
         <activity android:name=".class7.Class7Activity">
         </activity>
+        <activity android:name=".class8.Class8Activity">
+        </activity>
     </application>
 
 </manifest>
