@@ -57,6 +57,32 @@
         </activity>
         <activity android:name=".class8.Class8Activity">
         </activity>
+        <activity android:name=".class9.Class9Activity">
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="@string/authority"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths"/>
+        </provider>
+
+        <activity
+            android:name=".class9.FileSelectActivity"
+            android:label="File Selector">
+            <intent-filter>
+                <action android:name="android.intent.action.PICK"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.OPENABLE"/>
+
+                <data android:mimeType="text/plain"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

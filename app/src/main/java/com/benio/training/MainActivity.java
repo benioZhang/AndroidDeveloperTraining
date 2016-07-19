@@ -13,6 +13,7 @@ import com.benio.training.class5.Class5Activity;
 import com.benio.training.class6.Class6Activity;
 import com.benio.training.class7.Class7Activity;
 import com.benio.training.class8.Class8Activity;
+import com.benio.training.class9.Class9Activity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -20,7 +21,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         findViewById(R.id.btn_class1).setOnClickListener(this);
         findViewById(R.id.btn_class2).setOnClickListener(this);
         findViewById(R.id.btn_class3).setOnClickListener(this);
@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_class6).setOnClickListener(this);
         findViewById(R.id.btn_class7).setOnClickListener(this);
         findViewById(R.id.btn_class8).setOnClickListener(this);
+        findViewById(R.id.btn_class9).setOnClickListener(this);
     }
 
     @Override
@@ -64,6 +65,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.btn_class8:
                 startActivity(new Intent(this, Class8Activity.class));
+                break;
+
+            case R.id.btn_class9:
+                startActivity(new Intent(this, Class9Activity.class));
                 break;
 
             default:

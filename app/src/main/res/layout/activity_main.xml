@@ -63,5 +63,11 @@
             android:layout_height="wrap_content"
             android:text="Class8"/>
 
+        <Button
+            android:id="@+id/btn_class9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Class9"/>
+
     </LinearLayout>
 </ScrollView>
