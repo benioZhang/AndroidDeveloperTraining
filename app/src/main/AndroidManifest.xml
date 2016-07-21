@@ -96,11 +96,21 @@
             android:label="Android Beam Viewer">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
+
                 <category android:name="android.intent.category.DEFAULT"/>
 
                 <data android:mimeType="text/plain"/>
                 <data android:mimeType="image/*"/>
             </intent-filter>
+        </activity>
+
+        <receiver android:name=".class11.RemoteControlReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".class11.Class11Activity">
         </activity>
     </application>
 

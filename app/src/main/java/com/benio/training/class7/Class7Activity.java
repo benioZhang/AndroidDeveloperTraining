@@ -27,23 +27,23 @@ public class Class7Activity extends AppCompatActivity {
         int permissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_CALENDAR);
         if (permissionCheck == PackageManager.PERMISSION_GRANTED) {
             // Do something here
-            Toast.makeText(this, "Permission is granted", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "WRITE_CALENDAR Permission is granted", Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(this, "Permission is denied", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "WRITE_CALENDAR Permission is denied", Toast.LENGTH_SHORT).show();
         }
     }
 
     public void requestPermission(View view) {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_CONTACTS)
                 != PackageManager.PERMISSION_GRANTED) {
-            Log.d(TAG, "Permission is denied: ");
+            Log.d(TAG, "READ_CONTACTS Permission is denied: ");
             // Should we show an explanation?
             if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_CONTACTS)) {
                 // Show an explanation to the user *asynchronously* -- don't block
                 // this thread waiting for the user's response! After the user
                 // sees the explanation, try again to request the permission.
             } else {
-                Log.d(TAG, "Request permission at Runtime ");
+                Log.d(TAG, "READ_CONTACTS Request permission at Runtime ");
                 // No explanation needed, we can request the permission.
                 ActivityCompat.requestPermissions(this,
                         new String[]{Manifest.permission.READ_CONTACTS},
@@ -53,7 +53,7 @@ public class Class7Activity extends AppCompatActivity {
                 // result of the request.
             }
         } else {
-            Toast.makeText(Class7Activity.this, "Permission is already granted", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Class7Activity.this, "READ_CONTACTS Permission is already granted", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -68,11 +68,11 @@ public class Class7Activity extends AppCompatActivity {
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     // permission was granted, yay! Do the
                     // contacts-related task you need to do.
-                    Toast.makeText(Class7Activity.this, "Permission is granted at Runtime", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Class7Activity.this, "READ_CONTACTS Permission is granted at Runtime", Toast.LENGTH_SHORT).show();
                 } else {
                     // permission denied, boo! Disable the
                     // functionality that depends on this permission.
-                    Toast.makeText(Class7Activity.this, "Permission is denied at Runtime", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Class7Activity.this, "READ_CONTACTS Permission is denied at Runtime", Toast.LENGTH_SHORT).show();
                 }
             }
         }
