@@ -1,6 +1,7 @@
 package com.benio.training.class12;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -11,6 +12,8 @@ import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
+import android.widget.VideoView;
 
 import com.benio.training.R;
 
@@ -23,8 +26,11 @@ public class Class12Activity extends AppCompatActivity {
 
     static final int REQUEST_THUMBNAIL = 1;
     static final int REQUEST_FULL_SIZE = 2;
+    static final int REQUEST_VIDEO_CAPTURE = 3;
 
     private ImageView mImageView;
+
+    private VideoView mVideoView;
 
     private String mCurrentPhotoPath;
 
@@ -33,6 +39,15 @@ public class Class12Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_class12);
         mImageView = (ImageView) findViewById(R.id.image);
+        mVideoView = (VideoView) findViewById(R.id.video);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (mVideoView != null) {
+            mVideoView.stopPlayback();
+        }
     }
 
     public void getThumbnail(View view) {
@@ -51,8 +66,14 @@ public class Class12Activity extends AppCompatActivity {
             mImageView.setImageBitmap(imageBitmap);
         } else if (requestCode == REQUEST_FULL_SIZE && resultCode == RESULT_OK) {
             setPic();
+        } else if (requestCode == REQUEST_VIDEO_CAPTURE && resultCode == RESULT_OK) {
+            Uri uri = data.getData();
+            mVideoView.setVideoURI(uri);
+            mVideoView.start();
         }
     }
+
+    private static final String TAG = "Class12Activity";
 
     public void getFullSize(View view) {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -129,5 +150,16 @@ public class Class12Activity extends AppCompatActivity {
 
         Bitmap bitmap = BitmapFactory.decodeFile(mCurrentPhotoPath, options);
         mImageView.setImageBitmap(bitmap);
+    }
+
+    public void recordVideo(View view) {
+        if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA)) {
+            Toast.makeText(Class12Activity.this, "no camera", Toast.LENGTH_SHORT).show();
+        } else {
+            Intent intent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
+            if (intent.resolveActivity(getPackageManager()) != null) {
+                startActivityForResult(intent, REQUEST_VIDEO_CAPTURE);
+            }
+        }
     }
 }
