@@ -6,9 +6,13 @@
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
     <uses-permission android:name="android.permission.NFC"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <uses-feature
         android:name="android.hardware.nfc"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.camera"
         android:required="false"/>
 
     <application
@@ -111,6 +115,8 @@
         </receiver>
 
         <activity android:name=".class11.Class11Activity">
+        </activity>
+        <activity android:name=".class12.Class12Activity">
         </activity>
     </application>
 

@@ -10,10 +10,10 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.benio.training.MainActivity">
 
-    <LinearLayout
+    <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:columnCount="2">
 
         <Button
             android:id="@+id/btn_class1"
@@ -81,5 +81,10 @@
             android:layout_height="wrap_content"
             android:text="Class11"/>
 
-    </LinearLayout>
+        <Button
+            android:id="@+id/btn_class12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Class12"/>
+    </GridLayout>
 </ScrollView>
