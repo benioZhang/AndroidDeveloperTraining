@@ -118,6 +118,8 @@
         </activity>
         <activity android:name=".class12.Class12Activity">
         </activity>
+        <activity android:name=".class13.Class13Activity">
+        </activity>
     </application>
 
 </manifest>
