@@ -120,6 +120,10 @@
         </activity>
         <activity android:name=".class13.Class13Activity">
         </activity>
+        <activity android:name=".class14.Class14Activity">
+        </activity>
+        <activity android:name=".class14.MemoryCacheActivity">
+        </activity>
     </application>
 
 </manifest>
