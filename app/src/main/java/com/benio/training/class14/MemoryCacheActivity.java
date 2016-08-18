@@ -153,7 +153,7 @@ public class MemoryCacheActivity extends AppCompatActivity {
     }
 
     private class MyListAdapter extends BaseAdapter {
-        private final int[] imageArray = {R.mipmap.image1, R.mipmap.image2, R.mipmap.image3, R.mipmap.image4};
+        private final int[] imageArray = Images.IMAGES;
 
         @Override
         public int getCount() {

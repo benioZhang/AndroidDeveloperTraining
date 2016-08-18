@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/memory_cache"
+        android:title="Cache"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/managing_bitmap"
+        android:title="Manage"
+        app:showAsAction="ifRoom"/>
+
+</menu>

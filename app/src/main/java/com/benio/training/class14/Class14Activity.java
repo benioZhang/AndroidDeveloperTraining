@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -37,7 +36,8 @@ public class Class14Activity extends AppCompatActivity {
     }
 
     class MyListAdapter extends BaseAdapter {
-        private final int[] imageArray = {R.mipmap.image1, R.mipmap.image2, R.mipmap.image3, R.mipmap.image4};
+        private final int[] imageArray = Images.IMAGES;
+
         @Override
         public int getCount() {
             return 50;
@@ -135,29 +135,24 @@ public class Class14Activity extends AppCompatActivity {
         }
     }
 
-    static class AsyncDrawable extends BitmapDrawable {
-        private final WeakReference<AsyncTask> bitmapWorkerTaskReference;
-
-        public AsyncDrawable(Resources res, Bitmap bitmap, AsyncTask task) {
-            super(res, bitmap);
-            bitmapWorkerTaskReference = new WeakReference<AsyncTask>(task);
-        }
-
-        public AsyncTask getBitmapWorkerTask() {
-            return bitmapWorkerTaskReference.get();
-        }
-    }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        menu.add("Memory Cache");
+        getMenuInflater().inflate(R.menu.menu_class14, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        Intent intent = new Intent(this, MemoryCacheActivity.class);
-        startActivity(intent);
-        return true;
+        if (item.getItemId() == R.id.memory_cache) {
+            Intent intent = new Intent(this, MemoryCacheActivity.class);
+            startActivity(intent);
+            return true;
+        } else if (item.getItemId() == R.id.managing_bitmap) {
+            Intent intent = new Intent(this, ManagingBitmapActivity.class);
+            startActivity(intent);
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
