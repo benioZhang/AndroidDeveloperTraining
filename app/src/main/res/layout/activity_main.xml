@@ -98,5 +98,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Class14"/>
+
+        <Button
+            android:id="@+id/btn_class15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Class15"/>
     </GridLayout>
 </ScrollView>
