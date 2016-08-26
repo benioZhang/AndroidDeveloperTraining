@@ -8,9 +8,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
 
-
     <supports-gl-texture android:name="GL_OES_compressed_paletted_texture"/>
-
     <supports-gl-texture android:name="GL_OES_compressed_ETC1_RGB8_texture"/>
 
     <uses-feature
@@ -137,6 +135,8 @@
         <activity android:name=".class14.ImageDetailActivity">
         </activity>
         <activity android:name=".class15.Class15Activity">
+        </activity>
+        <activity android:name=".class16.Class16Activity">
         </activity>
     </application>
 
