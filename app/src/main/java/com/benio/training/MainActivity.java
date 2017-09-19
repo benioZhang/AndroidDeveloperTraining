@@ -19,6 +19,7 @@ import com.benio.training.class13.Class13Activity;
 import com.benio.training.class14.Class14Activity;
 import com.benio.training.class15.Class15Activity;
 import com.benio.training.class16.Class16Activity;
+import com.benio.training.class17.Class17Activity;
 import com.benio.training.class2.Class2Activity;
 import com.benio.training.class3.Class3Activity;
 import com.benio.training.class4.Class4Activity;
@@ -45,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
             new DemoInfo("Printing Content", Class13Activity.class),
             new DemoInfo("Displaying Bitmaps Efficiently", Class14Activity.class),
             new DemoInfo("Displaying Graphics with OpenGL ES", Class15Activity.class),
-            new DemoInfo("Animating Views Using Scenes and Transitions", Class16Activity.class)
+            new DemoInfo("Animating Views Using Scenes and Transitions", Class16Activity.class),
+            new DemoInfo("Adding Animations", Class17Activity.class)
     };
 
     private static class DemoInfo {

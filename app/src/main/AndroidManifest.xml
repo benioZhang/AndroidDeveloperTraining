@@ -138,6 +138,16 @@
         </activity>
         <activity android:name=".class16.Class16Activity">
         </activity>
+        <activity android:name=".class17.Class17Activity">
+        </activity>
+        <activity android:name=".class17.ScreenSlidePageActivity">
+        </activity>
+        <activity android:name=".class17.CardFlipActivity">
+        </activity>
+        <activity android:name=".class17.ZoomActivity">
+        </activity>
+        <activity android:name=".class17.LayoutChangesActivity">
+        </activity>
     </application>
 
 </manifest>
