@@ -148,6 +148,10 @@
         </activity>
         <activity android:name=".class17.LayoutChangesActivity">
         </activity>
+        <activity android:name=".class18.Class18Activity">
+        </activity>
+        <activity android:name=".class18.NsdChatActivity">
+        </activity>
     </application>
 
 </manifest>
