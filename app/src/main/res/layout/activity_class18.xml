@@ -16,4 +16,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="nsd"/>
+
+    <Button
+        android:id="@+id/btn_p2p"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="p2p"/>
 </LinearLayout>
