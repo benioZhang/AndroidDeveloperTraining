@@ -163,6 +163,7 @@
         </activity>
         <activity android:name=".class18.P2pConnectionActivity">
         </activity>
+        <activity android:name=".class18.P2pServiceDiscoveryActivity"/>
     </application>
 
 </manifest>

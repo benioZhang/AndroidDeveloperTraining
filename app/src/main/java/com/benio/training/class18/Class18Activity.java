@@ -15,6 +15,7 @@ public class Class18Activity extends AppCompatActivity implements View.OnClickLi
         setContentView(R.layout.activity_class18);
         findViewById(R.id.btn_nsd).setOnClickListener(this);
         findViewById(R.id.btn_p2p).setOnClickListener(this);
+        findViewById(R.id.btn_p2p_service_discovery).setOnClickListener(this);
     }
 
     @Override
@@ -25,6 +26,9 @@ public class Class18Activity extends AppCompatActivity implements View.OnClickLi
                 break;
             case R.id.btn_p2p:
                 startActivity(new Intent(this, P2pConnectionActivity.class));
+                break;
+            case R.id.btn_p2p_service_discovery:
+                startActivity(new Intent(this, P2pServiceDiscoveryActivity.class));
                 break;
         }
     }

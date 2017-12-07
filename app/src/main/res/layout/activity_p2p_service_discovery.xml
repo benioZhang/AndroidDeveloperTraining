@@ -9,23 +9,17 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.benio.training.class18.Class18Activity">
+    tools:context=".class18.P2pServiceDiscoveryActivity">
 
     <Button
-        android:id="@+id/btn_nsd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="nsd"/>
+        android:onClick="startRegistration"
+        android:text="register"/>
 
     <Button
-        android:id="@+id/btn_p2p"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="p2p"/>
-
-    <Button
-        android:id="@+id/btn_p2p_service_discovery"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="p2pServiceDiscovery"/>
+        android:onClick="discoveryService"
+        android:text="discoveryService"/>
 </LinearLayout>
